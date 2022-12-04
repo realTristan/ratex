@@ -1,4 +1,4 @@
-import os, shutil
+import os, shutil, re
 
 # // Build class
 class Build:
@@ -152,7 +152,7 @@ class List:
 # // Text class
 class Text:
     def __init__(self, content: str = "", bold: bool = False, italic: bool = False) -> None:
-        self.content = content
+        self.content = re.sub("\s\s+", " ", content).strip()
         self.bold = bold
         self.italic = italic
     
