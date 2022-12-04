@@ -1,11 +1,11 @@
 Metadata-Version: 2.1
 Name: ratex
-Version: 0.2.1
+Version: 0.2.2
 Summary: Use Python functions to create clean, optimized, readable LaTeX PDFs
-Home-page: https://github.com/Simpson-Computer-Technologies-Research/RaTeX
+Home-page: https://github.com/realTristan/RaTeX
 Author: Tristan Simpson
 Author-email: heytristaann@gmail.com
-Project-URL: Bug Tracker, https://github.com/Simpson-Computer-Technologies-Research/RaTeX/issues
+Project-URL: Bug Tracker, https://github.com/realTristan/RaTeX/issues
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
