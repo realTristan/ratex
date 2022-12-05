@@ -1,4 +1,5 @@
-from src.ratex import Build, Text
+from ratex import Build, Text
+import os
 
 # // New Ratex build
 r: Build = Build("main.tex")
@@ -27,7 +28,7 @@ r.table(columns = 3, headers = ["Mass ($kg$)", "Height ($m$)", "Force (N)"], dat
 
 # // Procedure
 r.header("Procedure", enumerate = False)
-r.list(type = r.enumerate, items = [
+r.list(type = "enumerate", items = [
     Text(r"The string was attached to the table."),
     Text(r"The mass was attached to the opposite end of the string."),
     Text(r"The mass was dropped and the bounceback height was measured."),

@@ -1,13 +1,11 @@
+from dataclasses import dataclass
 import os, shutil, re
 
 # // Build class
 class Build:
-    # // Variables for autofill
-    enumerate: str = "enumerate"
-    itemize: str = "itemize"
-    
     # // Initialize the class and build folder
     def __init__(self, build_file: str):
+        self.file_path = os.path.dirname(os.path.realpath(__file__))
         self.build_file = build_file
         if not os.path.exists("./build"):
             os.mkdir("./build")
@@ -31,11 +29,11 @@ class Build:
     
         if len(title) > 0:
             self.add("\\maketitle")
-        open(f"./build/{self.build_file}", "w").write("")
+        open(f"{self.file_path}/build/{self.build_file}", "w").write("")
     
     # // Update the contents inside the provided .tex file
     def done(self):
-        open(f"./build/{self.build_file}", "w").write(self.data + "\\end{document}")
+        open(f"{self.file_path}/build/{self.build_file}", "w").write(self.data + "\\end{document}")
     
     # // Update the data string
     def add(self, data: str):
@@ -82,11 +80,23 @@ class Build:
     def image(self, path: str, scale: int):
         path_split: list[str] = path.split("/")
         file_name: str = "".join(f"/{a}" for a in path_split[1:len(path_split) - 1])
-        if not os.path.exists(f"./build/{file_name}"):
-            os.mkdir(f"./build/{file_name}")
-        shutil.copy(path, f"./build/{file_name}")
+        if not os.path.exists(f"{self.file_path}/build/{file_name}"):
+            os.mkdir(f"{self.file_path}/build/{file_name}")
+        shutil.copy(path, f"{self.file_path}/build/{file_name}")
         self.add(Image(path=path, scale=scale)._init())
 
+
+# // Packages Dataclass
+@dataclass
+class Packages:
+    multirow: str = "multirow"
+    cancel: str = "cancel"
+    changepage: str = "changepage"
+    amssymb: str = "amssymb"
+    amsmath: str = "amsmath"
+    gensymb: str = "gensymb"
+    tkzeuclide: str = "tkz-euclide"
+    graphicx: str = "graphicx"
 
 # // Image class
 class Image:
@@ -96,8 +106,7 @@ class Image:
     
     def _init(self) -> str:
         return f"\includegraphics[scale={self.scale}]{{{self.path}}}"
-
-
+    
 # // Space class
 class Space:
     def __init__(self, type: str = "v", size: int = 1) -> None:

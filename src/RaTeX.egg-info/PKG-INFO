@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: ratex
-Version: 0.2.9.33
+Version: 0.2.9.34
 Summary: Efficiently Build LaTeX PDF Documents with Python
 Home-page: https://github.com/realTristan/ratex
 Author: Tristan Simpson
@@ -26,37 +26,49 @@ pip install ratex
 <h3>Code</h3>
 
 ```py
-# // Create a new build
-r: Ratex = Ratex("main.tex")
+from ratex import Build, Text
+
+# // New Ratex build
+r: Build = Build("main.tex")
 r.new(
     doc_class = "article", 
-    title = "RaTeX", 
+    title = "Physics Lab", 
     author = "Tristan Simpson",
     packages = [
         "multirow",
         "cancel",
-        "changepage"
+        "changepage",
     ]
 )
 
-# // Create a new table element!
+# // Observations
 r.header("Observations", enumerate = False)
-r.text(r"With such a readable command new LaTeX learners can understand what's happening!\newline\newline")
+r.text(r"""
+    Using the two provided object we could calculate net force of the 
+    bounceback from a mass and a string. By 30kg the string broke after the mass was dropped. 
+    The table below describes our group observations.\newline\newline
+""")
 r.table(columns = 3, headers = ["Mass ($kg$)", "Height ($m$)", "Force (N)"], data = [
     "10kg", "11.4m", "108.73N",
     "20kg", "16.7m", "276.52N",
 ])
 
-# // Create a new section!
-r.header("Who am I?", enumerate = True)
-r.section(size = 1, margin = 0, items = [
-    Text(r"My name is Tristan Simpson and I'm a Systems Software Engineer! RaTeX builds fast, clean, concise LaTeX files.")
+# // Procedure
+r.header("Procedure", enumerate = False)
+r.list(type = r.enumerate, items = [
+    Text(r"The string was attached to the table."),
+    Text(r"The mass was attached to the opposite end of the string."),
+    Text(r"The mass was dropped and the bounceback height was measured."),
+    Text(r"The net force was calculated.")
 ])
+
+# // Finalize the build
+r.done()
 ```
 
 <h3>Output</h3>
 
-![ratex2](https://user-images.githubusercontent.com/75189508/205514223-3d07cb5a-4226-43f6-b6ed-57ea95ddde2b.png)
+
 
 # License
 MIT License
