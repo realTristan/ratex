@@ -30,7 +30,7 @@ class Build:
         # // Base Document
         self.data = (
             f"\\documentclass{{{doc_class}}}" + 
-            "".join(f"\\usepackage{{{p}}}" for p in packages)
+            "".join(f"\\usepackage{p}" for p in packages)
         )
 
         # // Top Title and Author if maketitle
