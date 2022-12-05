@@ -60,8 +60,8 @@ class Build:
         self.add(Table(columns=columns, headers=headers, data=data))
     
     # // Create a new text element in the pdf
-    def text(self, content: str = "", bold: bool = False, italic: bool = False):
-        self.add(Text(content=content, bold=bold, italic=italic))
+    def text(self, content: str = "", b: bool = False, it: bool = False):
+        self.add(Text(content=content, b=b, it=it))
     
     # // Create a new adjust (adjustwidth) element in the pdf
     def adjust(self, width: int = 0, margin: int = 0, items: list[any] = []):
