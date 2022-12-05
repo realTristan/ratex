@@ -4,11 +4,15 @@ import os, shutil, re
 # // Build class
 class Build:
     # // Initialize the class and build folder
-    def __init__(self, build_file: str):
-        self.file_path = os.path.dirname(os.path.realpath(__file__))
+    def __init__(self, build_file: str = "main.tex", file_dir: str = ""):
         self.build_file = build_file
-        if not os.path.exists("./build"):
-            os.mkdir("./build")
+        self.file_dir = ""
+        
+        if len(file_dir) > 0:
+            self.file_dir = os.path.dirname(os.path.abspath(file_dir))
+            
+        if not os.path.exists(f"{self.file_dir}\\build"):
+            os.mkdir(f"{self.file_dir}\\build")
 
     # // Initialize the PDF Document
     def new(self, 
@@ -29,11 +33,11 @@ class Build:
     
         if len(title) > 0:
             self.add("\\maketitle")
-        open(f"{self.file_path}/build/{self.build_file}", "w").write("")
+        open(f"{self.file_dir}\\build\\{self.build_file}", "w").write("")
     
     # // Update the contents inside the provided .tex file
     def done(self):
-        open(f"{self.file_path}/build/{self.build_file}", "w").write(self.data + "\\end{document}")
+        open(f"{self.file_dir}\\build\\{self.build_file}", "w").write(self.data + "\\end{document}")
     
     # // Update the data string
     def add(self, data: str):
@@ -79,10 +83,10 @@ class Build:
     # // Add a new image
     def image(self, path: str, scale: int):
         path_split: list[str] = path.split("/")
-        file_name: str = "".join(f"/{a}" for a in path_split[1:len(path_split) - 1])
-        if not os.path.exists(f"{self.file_path}/build/{file_name}"):
-            os.mkdir(f"{self.file_path}/build/{file_name}")
-        shutil.copy(path, f"{self.file_path}/build/{file_name}")
+        file_name: str = "".join(f"\\{a}" for a in path_split[1:len(path_split) - 1])
+        if not os.path.exists(f"{self.file_dir}\\build\\{file_name}"):
+            os.mkdir(f"{self.file_dir}\\build\\{file_name}")
+        shutil.copy(path, f"{self.file_dir}\\build\\{file_name}")
         self.add(Image(path=path, scale=scale)._init())
 
 
