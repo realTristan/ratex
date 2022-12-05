@@ -7,9 +7,9 @@ r.new(
     title = "RaTeX Physics Lab", 
     author = "Tristan Simpson",
     packages = [
-        "multirow",
-        "cancel",
-        "changepage",
+        "{multirow}",
+        "{cancel}",
+        "{changepage}",
     ]
 )
 

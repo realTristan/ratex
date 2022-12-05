@@ -2,7 +2,7 @@ import re
 
 # // Equation class
 class Equation(object):
-    def __init__(self, content: str):
+    def __init__(self, content: str) -> None:
         self.content = re.sub("\s\s+", " ", content).strip()
 
     def __str__(self) -> str:
@@ -11,7 +11,7 @@ class Equation(object):
 
 # // Eq class
 class Eq(object):
-    def __init__(self, content: str):
+    def __init__(self, content: str) -> None:
         self.content = re.sub("\s\s+", " ", content).strip()
 
     def __str__(self) -> str:

@@ -1,10 +1,10 @@
 from .adjust import Align, Adjust
+from .text import Text, Equation
 from .header import Header
 from .table import Table
 from .image import Image
 from .space import Space
 from .list import List
-from .text import Text
 from .flex import Flex
 import os, shutil
 
@@ -91,6 +91,10 @@ class Build:
     # // Add a new line
     def newline(self):
         self.add("\\newline")
+    
+    # // Add a new equation
+    def eq(self, content: str):
+        self.add(Equation(content=content))
     
     # // Add a new image
     def image(self, path: str, scale: int):
