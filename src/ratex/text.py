@@ -36,5 +36,5 @@ class Text(object):
             return f"\\textit{{{self.content}}}"
         elif self.italic and self.bold:
             return f"\\textbf{{\\textit{{{self.content}}}}}"
-        return self.content
+        return f"{{{self.content}}}"
     

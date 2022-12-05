@@ -27,17 +27,22 @@ class Build:
             title = "", author = "", 
             custom = []
     ):
+        # // Base Document
         self.data = (
             f"\\documentclass{{{doc_class}}}" + 
             "".join(f"\\usepackage{{{p}}}" for p in packages)
         )
+
+        # // Top Title and Author if maketitle
         if len(title) > 0:
             self.add(f"\\title{{{title}}}\\author{{{author}}}")
-            
+        
+        # // Custom args and begin document
         if len(custom) > 0:
             self.add(" ".join(l for l in custom))
         self.add("\\begin{document}")
     
+        # // If title, maketitle
         if len(title) > 0:
             self.add("\\maketitle")
         open(f"{self.file_dir}/build/{self.build_file}", "w").write("")
