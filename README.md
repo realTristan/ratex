@@ -2,7 +2,7 @@
 ![LaTeX_logo svg](https://user-images.githubusercontent.com/75189508/205514342-de019b59-ae1e-44a0-952e-02e289abf584.png)
 
 # Install
-If you don't have LaTeX installed, go to https://www.overleaf.com/ and copy + paste the "main.tex" file code into the editor!
+If you don't have LaTeX installed, go to https://www.overleaf.com/ and copy + paste the "/build/main.tex" file code into the editor!
 ```py
 pip install ratex
 ```
