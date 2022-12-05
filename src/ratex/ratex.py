@@ -15,18 +15,22 @@ class Build:
     # // Initialize the PDF Document
     def new(self, 
             doc_class = "article", packages = [""], 
-            title = "", author = "No Author Provided", 
+            title = "", author = "", 
             custom = []
     ):
         self.data = (
             f"\\documentclass{{{doc_class}}}" + 
             "".join(f"\\usepackage{{{p}}}" for p in packages)
         )
-        if len(custom) > 0:
-            self.data += " ".join(l for l in custom)
-            
         if len(title) > 0:
-            self.data += f"\\title{{{title}}}\\author{{{author}}}\\begin{{document}}\\maketitle"
+            self.add(f"\\title{{{title}}}\\author{{{author}}}")
+            
+        if len(custom) > 0:
+            self.add(" ".join(l for l in custom))
+        self.add("\\begin{document}")
+    
+        if len(title) > 0:
+            self.add("\\maketitle")
         open(f"./build/{self.build_file}", "w").write("")
     
     # // Update the contents inside the provided .tex file

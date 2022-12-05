@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: ratex
-Version: 0.2.9.4
+Version: 0.2.9.33
 Summary: Efficiently Build LaTeX PDF Documents with Python
 Home-page: https://github.com/realTristan/ratex
 Author: Tristan Simpson
@@ -15,6 +15,11 @@ License-File: LICENSE
 
 # RaTeX ![Stars](https://img.shields.io/github/stars/Simpson-Computer-Technologies-Research/RaTeX?color=brightgreen) ![Watchers](https://img.shields.io/github/watchers/Simpson-Computer-Technologies-Research/RaTeX?label=Watchers)
 ![LaTeX_logo svg](https://user-images.githubusercontent.com/75189508/205514342-de019b59-ae1e-44a0-952e-02e289abf584.png)
+
+# Install
+```py
+pip install ratex
+```
 
 # Preview
 
