@@ -2,6 +2,7 @@
 ![LaTeX_logo svg](https://user-images.githubusercontent.com/75189508/205514342-de019b59-ae1e-44a0-952e-02e289abf584.png)
 
 # Install
+If you don't have LaTeX installed, go to https://www.overleaf.com/ and copy + paste the "/build/main.tex" file code into the editor!
 ```py
 pip install ratex
 ```
@@ -53,7 +54,7 @@ r.done()
 
 <h3>Output</h3>
 
-
+![ratex2](https://user-images.githubusercontent.com/75189508/205525983-dcfbc5a0-1aa8-4180-8706-cdb778c22e63.png)
 
 # License
 MIT License
