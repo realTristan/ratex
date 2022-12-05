@@ -1,12 +1,12 @@
 
 # // Table class
-class Table:
+class Table(object):
     def __init__(self, columns: int, headers: list[str], data: list[any]) -> None:
         self.headers = headers
         self.columns = columns
         self.data = data
         
-    def _init(self) -> str:
+    def __str__(self) -> str:
         self.data = self._split_data(self.data)
         return (
             "\\begin{tabular}{" + "".join('|c' for _ in range(self.columns)) + "|}\hline " + 

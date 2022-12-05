@@ -1,7 +1,7 @@
-from ratex import Build, Text
+from src.ratex import Build, Text, Header
 
 # // New Ratex build
-r: Build = Build(__file__, "main.tex")
+r: Build = Build("main.tex", __file__)
 r.new(
     doc_class = "article", 
     title = "RaTeX Physics Lab", 

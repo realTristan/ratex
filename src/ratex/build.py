@@ -1,4 +1,4 @@
-from .align import Align, Adjust
+from .adjust import Align, Adjust
 from .header import Header
 from .table import Table
 from .image import Image
@@ -48,40 +48,40 @@ class Build:
     
     # // Update the data string
     def add(self, data: str):
-        self.data += data
+        self.data += str(data)
         
     # // Create a new table element in the pdf
     def table(self, columns: int, headers: list[str], data: list[any]):
-        self.add(Table(columns=columns, headers=headers, data=data)._init())
+        self.add(Table(columns=columns, headers=headers, data=data))
     
     # // Create a new text element in the pdf
     def text(self, content: str = "", bold: bool = False, italic: bool = False):
-        self.add(Text(content=content, bold=bold, italic=italic)._init())
+        self.add(Text(content=content, bold=bold, italic=italic))
     
     # // Create a new adjust (adjustwidth) element in the pdf
-    def adjust(self, size: int = 0, margin: int = 0, items: list[any] = []):
-        self.add(Adjust(size=size, margin=margin, items=items)._init())
+    def adjust(self, width: int = 0, margin: int = 0, items: list[any] = []):
+        self.add(Adjust(width=width, margin=margin, items=items))
     
     # // Create a new header (/section) element in the pdf
     def header(self, content: str, enumerate: bool = False):
         enum: str = {True: '', False: '*'}[enumerate]
-        self.add(Header(content=content, enumerate=enum)._init())
+        self.add(Header(content=content, enumerate=enum))
     
     # // Create a new list element
     def list(self, type: str = "itemize", items: list[any] = []):
-        self.add(List(type=type, items=items)._init())
+        self.add(List(type=type, items=items))
     
     # // Create a new flex element
     def flex(self, width: int = 0.33, items = []):
-        self.add(Flex(width=width, items=items)._init())
+        self.add(Flex(width=width, items=items))
     
     # // Create a new vertical space element
     def vspace(self, size: int = 1):
-        self.add(Space(type="v", size=size)._init())
+        self.add(Space(type="v", size=size))
         
     # // Create a new horizontal space element
     def hspace(self, size: int = 1):
-        self.add(Space(type="h", size=size)._init())
+        self.add(Space(type="h", size=size))
     
     # // Add a new line
     def newline(self):
@@ -94,5 +94,5 @@ class Build:
         if not os.path.exists(f"{self.file_dir}/build/{file_name}"):
             os.mkdir(f"{self.file_dir}/build/{file_name}")
         shutil.copy(path, f"{self.file_dir}/build/{file_name}")
-        self.add(Image(path=path, scale=scale)._init())
+        self.add(Image(path=path, scale=scale))
 

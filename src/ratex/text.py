@@ -1,13 +1,16 @@
 import re
 
 # // Equations class
-class Eq:
+class Eq(object):
     def __init__(self):
+        pass
+
+    def __str__(self) -> str:
         pass
 
 
 # // Text class
-class Text:
+class Text(object):
     def __init__(self, content: str = "", bold: bool = False, italic: bool = False) -> None:
         self.content = re.sub("\s\s+", " ", content).strip()
         self.bold = bold
@@ -25,7 +28,7 @@ class Text:
                     content[i] = "$ $"
         return r"".join(c for c in content) + " "
         
-    def _init(self) -> str:
+    def __str__(self) -> str:
         self.content = self.clean_content(self.content)
         if self.bold:
             return f"\\textbf{{{self.content}}}"
