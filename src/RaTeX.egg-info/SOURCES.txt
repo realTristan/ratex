@@ -3,7 +3,16 @@ README.md
 pyproject.toml
 setup.cfg
 src/ratex/__init__.py
+src/ratex/align.py
+src/ratex/flex.py
+src/ratex/header.py
+src/ratex/image.py
+src/ratex/list.py
+src/ratex/packages.py
 src/ratex/ratex.py
+src/ratex/space.py
+src/ratex/table.py
+src/ratex/text.py
 src/ratex.egg-info/PKG-INFO
 src/ratex.egg-info/SOURCES.txt
 src/ratex.egg-info/dependency_links.txt
