@@ -2,11 +2,11 @@
 # // Align class
 class Align(object):
     # // flalign, fralign, align
-    def __init__(self, type: str = "align", items: list[any] = []):
+    def __init__(self, type: str = "align", items: list[any] = []) -> None:
         self.type = type
         self.items = items
 
-    def __str__(self):
+    def __str__(self) -> str:
         # \begin{flalign*}
         pass
 
