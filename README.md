@@ -1,4 +1,4 @@
-# RaTeX ![Stars](https://img.shields.io/github/stars/Simpson-Computer-Technologies-Research/ratex?color=brightgreen) ![Watchers](https://img.shields.io/github/watchers/Simpson-Computer-Technologies-Research/ratex?label=Watchers)
+# RaTeX ![Stars](https://img.shields.io/github/stars/realTristan/ratex?color=brightgreen) ![Watchers](https://img.shields.io/github/watchers/realTristan/ratex?label=Watchers)
 ![LaTeX_logo svg](https://user-images.githubusercontent.com/75189508/205514342-de019b59-ae1e-44a0-952e-02e289abf584.png)
 
 # Install
