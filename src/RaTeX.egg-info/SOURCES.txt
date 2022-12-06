@@ -9,6 +9,7 @@ src/ratex/errors.py
 src/ratex/flex.py
 src/ratex/header.py
 src/ratex/image.py
+src/ratex/line_list.py
 src/ratex/list.py
 src/ratex/packages.py
 src/ratex/space.py

@@ -7,6 +7,7 @@ from .image import Image
 from .space import Space
 from .list import List
 from .flex import Flex
+from .line_list import LineList
 
 # // Python Imports
 import os, shutil, subprocess
@@ -77,6 +78,10 @@ class Build:
     # // Create a new list element
     def list(self, type: str = "itemize", items: list[any] = []):
         self.add(List(type=type, items=items))
+    
+    # // Line list. List created by newlines in a string.
+    def line_list(self, type: str = "itemize", content: str = ""):
+        self.add(LineList(type=type, content=content))
     
     # // Create a new flex element
     def flex(self, width: int = 0.33, items = []):

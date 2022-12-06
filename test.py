@@ -13,6 +13,17 @@ r.new(
     ]
 )
 
+
+r.line_list(content=r"""
+this
+is 
+a
+test
+
+
+
+""")
+
 # // Observations
 r.header("Observations", enumerate = False)
 r.text(b=False, it=False, content=r"""
