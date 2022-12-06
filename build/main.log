@@ -1,15 +1,15 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11.25) (preloaded format=pdflatex 2022.12.4)  5 DEC 2022 20:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.30)  6 DEC 2022 07:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**c:/Users/Admin/Desktop/ratex/build/main.tex
-(c:/Users/Admin/Desktop/ratex/build/main.tex
-LaTeX2e <2022-11-01> patch level 1
-L3 programming layer <2022-11-02>
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
-Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
-File: size10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+**/Users/tristan/Desktop/ratex/build/main.tex
+(/Users/tristan/Desktop/ratex/build/main.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-02-24>
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count185
 \c@section=\count186
@@ -19,33 +19,31 @@ File: size10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
 \c@subparagraph=\count190
 \c@figure=\count191
 \c@table=\count192
-\abovecaptionskip=\skip48
-\belowcaptionskip=\skip49
-\bibindent=\dimen140
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
 )
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
-\multirow@colwidth=\skip50
+\multirow@colwidth=\skip49
 \multirow@cntb=\count193
-\multirow@dima=\skip51
-\bigstrutjot=\dimen141
+\multirow@dima=\skip50
+\bigstrutjot=\dimen139
 )
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/cancel\cancel.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/cancel/cancel.sty
 Package: cancel 2013/04/12 v2.2 Cancel math terms
 )
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/changepage\changepage.s
-ty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/changepage/changepage.sty
 Package: changepage 2009/10/20 v1.0c check page and change page layout
 \c@cp@cntr=\count194
 \cp@tempcnt=\count195
 )
-(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
-tex.def
-File: l3backend-pdftex.def 2022-10-26 L3 backend support: PDF output (pdfTeX)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count196
-\l__pdf_internal_box=\box51
+\l__pdf_internal_box=\box50
 )
-No file main.aux.
+(/Users/tristan/Desktop/ratex/build//main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 1.
@@ -84,27 +82,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--1
 
 [1
 
-{C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-(c:\Users\Admin\Desktop\ratex\build\main.aux) ) 
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+(/Users/tristan/Desktop/ratex/build//main.aux) ) 
 Here is how much of TeX's memory you used:
- 629 strings out of 475281
- 12287 string characters out of 2774065
- 356336 words of memory out of 3000000
- 22173 multiletter control sequences out of 15000+600000
+ 604 strings out of 478268
+ 11483 string characters out of 5846346
+ 303852 words of memory out of 5000000
+ 18870 multiletter control sequences out of 15000+600000
  472899 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,7n,38p,1032b,194s stack positions out of 10000i,1000n,20000p,200000b,80000s
-<C:/Users/Admin/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Admin/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Admi
-n/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Us
-ers/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pf
-b><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmr17.pfb>
-Output written on c:\Users\Admin\Desktop\ratex\build\main.pdf (1 page, 63874 by
-tes).
+ 34i,7n,38p,1032b,191s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2022/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2022/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2022/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2022/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2022/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on /Users/tristan/Desktop/ratex/build//main.pdf (1 page, 60983 b
+ytes).
 PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
+ 33 PDF objects out of 1000 (max. 8388607)
+ 19 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

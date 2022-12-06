@@ -12,15 +12,14 @@ class Align(object):
 
 # // Adjust class
 class Adjust(object):
-    def __init__(self, width: int = 0, margin: int = 0, items: list[any] = []) -> None:
+    def __init__(self, width: int, items: list[any]) -> None:
         self.width = width
-        self.margin = margin
         self.items = items
     
     def __str__(self) -> str:
         if len(self.items) > 0:
             return (
-                f"\\begin{{adjustwidth}}{{{self.width}cm}}{{{self.margin}pt}}" +
+                f"\\begin{{adjustwidth}}{{{self.width}cm}}{{0pt}}" +
                 "".join(str(i) for i in self.items) +
                 f"\\end{{adjustwidth}}\\leavevmode\\\\"
             )
