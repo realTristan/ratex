@@ -1,0 +1,110 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.11.25) (preloaded format=pdflatex 2022.12.4)  5 DEC 2022 20:35
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**c:/Users/Admin/Desktop/ratex/build/main.tex
+(c:/Users/Admin/Desktop/ratex/build/main.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2022-11-02>
+(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
+(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
+File: size10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+)
+(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip50
+\multirow@cntb=\count193
+\multirow@dima=\skip51
+\bigstrutjot=\dimen141
+)
+(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/cancel\cancel.sty
+Package: cancel 2013/04/12 v2.2 Cancel math terms
+)
+(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/changepage\changepage.s
+ty
+Package: changepage 2009/10/20 v1.0c check page and change page layout
+\c@cp@cntr=\count194
+\cp@tempcnt=\count195
+)
+(C:\Users\Admin\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2022-10-26 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count196
+\l__pdf_internal_box=\box51
+)
+No file main.aux.
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 1.
+LaTeX Font Info:    ... okay on input line 1.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 1.
+LaTeX Font Info:    ... okay on input line 1.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 1.
+LaTeX Font Info:    ... okay on input line 1.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 1.
+LaTeX Font Info:    ... okay on input line 1.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 1.
+LaTeX Font Info:    ... okay on input line 1.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 1.
+LaTeX Font Info:    ... okay on input line 1.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 1.
+LaTeX Font Info:    ... okay on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--1
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--1
+
+ []
+
+[1
+
+{C:/Users/Admin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+(c:\Users\Admin\Desktop\ratex\build\main.aux) ) 
+Here is how much of TeX's memory you used:
+ 629 strings out of 475281
+ 12287 string characters out of 2774065
+ 356336 words of memory out of 3000000
+ 22173 multiletter control sequences out of 15000+600000
+ 472899 words of font info for 40 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 34i,7n,38p,1032b,194s stack positions out of 10000i,1000n,20000p,200000b,80000s
+<C:/Users/Admin/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Admin/AppData
+/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Admi
+n/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Us
+ers/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pf
+b><C:/Users/Admin/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmr17.pfb>
+Output written on c:\Users\Admin\Desktop\ratex\build\main.pdf (1 page, 63874 by
+tes).
+PDF statistics:
+ 31 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,3 +1,4 @@
+import os, shutil, subprocess
 from .adjust import Align, Adjust
 from .text import Text, Equation
 from .header import Header
@@ -6,7 +7,6 @@ from .image import Image
 from .space import Space
 from .list import List
 from .flex import Flex
-import os, shutil
 
 # // Build class
 class Build:
@@ -50,6 +50,10 @@ class Build:
     # // Update the contents inside the provided .tex file
     def done(self):
         open(f"{self.file_dir}/build/{self.build_file}", "w").write(self.data + "\\end{document}")
+        if "compiled with zlib" in str(subprocess.check_output("pdflatex --version")).lower():
+            os.system(
+                f"pdflatex -aux-directory={self.file_dir}/build/ -output-directory={self.file_dir}/build/ {self.file_dir}/build/{self.build_file}"
+            )
     
     # // Update the data string
     def add(self, data: str):
