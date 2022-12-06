@@ -8,4 +8,6 @@ class LineList(object):
 
     def __str__(self) -> str:
         self.content = self.content.strip().split("\n")
-        return str(List(type=self.type, items=self.content))
+        return str(List(
+            type=self.type, items=[i for i in self.content if len(i) > 0]
+        ))
