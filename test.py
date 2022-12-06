@@ -1,4 +1,4 @@
-from src.ratex import Build, Text, Header
+from src.ratex import Build, Text
 
 # // New Ratex build
 r: Build = Build("main.tex", __file__)
