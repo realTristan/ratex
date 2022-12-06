@@ -29,7 +29,7 @@ r.new(
 
 # // Observations
 r.header("Observations", enumerate = False)
-r.text(bold=False, italic=False, content=r"""
+r.text(b=False, it=False, content=r"""
     Using the two provided objects we could calculate net force of the 
     bounceback from a mass and a string. By 30kg the string broke after the mass was dropped. 
     The table below describes our group observations.\newline\newline
