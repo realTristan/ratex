@@ -4,7 +4,6 @@ from .list import List, LineList
 from .adjust import Adjust
 from .header import Header
 from .table import Table
-from .image import Image
 from .space import Space
 from .flex import Flex
 
@@ -99,22 +98,22 @@ class Build:
             self.add("\\newline")
     
     # // Add a new equation
-    def eq(self, content: str):
-        self.add(Equation(content=content))
+    def eq(self, content: str, enumerate: bool= False):
+        self.add(Equation(content=content, enumerate=enumerate))
 
     # // Check image path for the image() and raw_image() functions
-    def check_image_path(self, path: str):
+    def __check_image_path(self, path: str):
         if not os.path.exists(f"{self.__file__}/build/images"):
             os.makedirs(f"{self.__file__}/build/images")
         shutil.copy(f"{self.__file__}/{path}", f"{self.__file__}/build/images")
 
     # // Add a new image
     def image(self, path: str, scale: int):
-        self.check_image_path(path=path)
+        self.__check_image_path(path=path)
         self.add(f"\includegraphics[scale={scale}]{{{self.__file__}/{path}}}")
 
     # // Returns a raw image string
     def raw_image(self, path: str, scale: int):
-        self.check_image_path(path=path)
+        self.__check_image_path(path=path)
         return f"\includegraphics[scale={scale}]{{{self.__file__}/{path}}}"
 
