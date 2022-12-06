@@ -1,4 +1,4 @@
-from src.ratex import Build, Text
+from src.ratex import Build, Text, Packages
 
 # // New Ratex build
 r: Build = Build("main.tex", __file__)
@@ -10,9 +10,12 @@ r.new(
         "{multirow}",
         "{cancel}",
         "{changepage}",
+        Packages.graphicx
     ]
 )
 
+
+r.image(path="images/ratex1.png", scale=1)
 
 r.line_list(content=r"""
 this

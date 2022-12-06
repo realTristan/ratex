@@ -104,18 +104,17 @@ class Build:
 
     # // Check image path for the image() and raw_image() functions
     def check_image_path(self, path: str):
-        path_split: list[str] = path.split("/")
-        file_name: str = "".join(f"\\{a}" for a in path_split[1:len(path_split) - 1])
-        if not os.path.exists(f"{self.__file__}/build/{file_name}"):
-            os.mkdir(f"{self.__file__}/build/{file_name}")
-        shutil.copy(path, f"{self.__file__}/build/{file_name}")
+        if not os.path.exists(f"{self.__file__}/build/images"):
+            os.makedirs(f"{self.__file__}/build/images")
+        shutil.copy(f"{self.__file__}/{path}", f"{self.__file__}/build/images")
 
     # // Add a new image
     def image(self, path: str, scale: int):
         self.check_image_path(path=path)
-        self.add(Image(path=path, scale=scale))
-    
-    # // Add a new image
+        self.add(f"\includegraphics[scale={scale}]{{{self.__file__}/{path}}}")
+
+    # // Returns a raw image string
     def raw_image(self, path: str, scale: int):
         self.check_image_path(path=path)
-        return Image(path=path, scale=scale)
+        return f"\includegraphics[scale={scale}]{{{self.__file__}/{path}}}"
+
