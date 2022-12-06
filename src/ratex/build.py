@@ -1,17 +1,15 @@
 # // Class Imports
 from .text import Text, Equation
+from .list import List, LineList
 from .adjust import Adjust
 from .header import Header
 from .table import Table
 from .image import Image
 from .space import Space
-from .list import List
 from .flex import Flex
-from .line_list import LineList
 
 # // Python Imports
 import os, shutil, subprocess
-
 
 # // Build class
 class Build:
