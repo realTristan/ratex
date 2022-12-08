@@ -6,4 +6,4 @@ class Header(object):
         self.enumerate = enumerate
         
     def __str__(self) -> str:
-        return f"\section{self.enumerate}{{{self.content}}}"
+        return f"\section{'' if self.enumerate else '*'}{{{self.content}}}"
