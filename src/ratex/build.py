@@ -3,12 +3,13 @@ from .text import Text, Equation
 from .list import List, LineList
 from .adjust import Adjust
 from .header import Header
+from .errors import Errors
 from .table import Table
 from .space import Space
 from .flex import Flex
 
 # // Python Imports
-import os, shutil, subprocess
+import os, subprocess
 
 # // Build class
 class Build:
@@ -101,19 +102,21 @@ class Build:
     def eq(self, content: str, enumerate: bool= False):
         self.add(Equation(content=content, enumerate=enumerate))
 
-    # // Check image path for the image() and raw_image() functions
-    def __check_image_path(self, path: str):
-        if not os.path.exists(f"{self.__file__}/build/images"):
-            os.makedirs(f"{self.__file__}/build/images")
-        shutil.copy(f"{self.__file__}/{path}", f"{self.__file__}/build/images")
-
     # // Add a new image
     def image(self, path: str, scale: int):
-        self.__check_image_path(path=path)
+        if len(path) < 1:
+            return Errors.warning("No image path was provided.")
+            
+        if not os.path.exists(f"{self.__file__}/{path}"):
+            return Errors.critical("Image path does not exist!")
         self.add(f"\includegraphics[scale={scale}]{{{self.__file__}/{path}}}")
 
     # // Returns a raw image string
     def raw_image(self, path: str, scale: int):
-        self.__check_image_path(path=path)
+        if len(path) < 1:
+            return Errors.warning("No image path was provided.")
+
+        if not os.path.exists(f"{self.__file__}/{path}"):
+            return Errors.critical("Image path does not exist!")
         return f"\includegraphics[scale={scale}]{{{self.__file__}/{path}}}"
 
