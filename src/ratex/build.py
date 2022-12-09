@@ -1,8 +1,8 @@
 # // Class Imports
+from .header import Header, Subheader
 from .text import Text, Equation
 from .list import List, LineList
 from .adjust import Adjust
-from .header import Header
 from .errors import Errors
 from .table import Table
 from .space import Space
@@ -91,6 +91,12 @@ class Build:
     ) -> str:
         return str(Header(content=content, enumerate=enumerate))
     
+    # // Create a new header (/section) element in the pdf
+    def subheader(
+        self, content: str, enumerate: bool = False
+    ) -> str:
+        return str(Subheader(content=content, enumerate=enumerate))
+    
     # // Create a new list element
     def list(
         self, type: str = "itemize", items: list[any] = []
@@ -156,6 +162,12 @@ class Build:
         self, content: str, enumerate: bool = False
     ) -> None:
         self.add(Header(content=content, enumerate=enumerate))
+    
+    # // Create a new header (/section) element in the pdf
+    def add_subheader(
+        self, content: str, enumerate: bool = False
+    ) -> str:
+        return self.add(Subheader(content=content, enumerate=enumerate))
     
     # // Create a new list element
     def add_list(
