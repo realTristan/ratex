@@ -14,7 +14,7 @@ import os, subprocess
 # // Build class
 class Build:
     # // Initialize the class and build folder
-    def __init__(self, file_name: str, __file__: str):
+    def __init__(self, file_name: str, __file__: str) -> None:
         self.file_name = file_name
         self.__file__ = os.path.dirname(os.path.abspath(__file__))
         if not os.path.exists(f"{self.__file__}/build"):
@@ -23,7 +23,7 @@ class Build:
     # // Initialize the PDF Document
     def new(self, 
         doc_class = "article", packages = [""], title = "", author = "", custom = []
-    ):
+    ) -> None:
         # // Base Document
         self.data = (
             f"\\documentclass{{{doc_class}}}" + 
@@ -45,7 +45,7 @@ class Build:
         open(f"{self.__file__}/build/{self.file_name}", "w").write("")
     
     # // Update the contents inside the provided .tex file
-    def done(self):
+    def done(self) -> None:
         open(f"{self.__file__}/build/{self.file_name}", "w").write(self.data + "\\end{document}")
         if "compiled with zlib" in str(subprocess.check_output("pdflatex --version", shell=True)).lower():
             os.system(
