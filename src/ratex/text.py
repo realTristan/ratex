@@ -9,7 +9,7 @@ class Equation(object):
     def __str__(self) -> str:
         self.content = self.content.replace(" ", "\\;")
         type: str = '*'  if not self.enumerate else ''
-        return f"\\begin{{equation{type}}}{self.content}\\end{{equation{type}}}"
+        return f"\\begin{{equation{type}}}{self.content}\\end{{equation{type}}}\leavevmode"
 
 # // Text class
 class Text(object):

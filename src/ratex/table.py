@@ -17,7 +17,7 @@ class Table(object):
                 "\\begin{tabular}{" + "".join('|c' for _ in range(self.columns)) + "|}\hline" + 
                 self.__headers() + 
                 self.__body() + 
-                "\\end{tabular}\\leavevmode\\\\"
+                "\\end{tabular}\\leavevmode"
             )
         Errors.warning("Table is empty. (0 columns)")
         return ""
