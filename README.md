@@ -22,8 +22,8 @@ r.new(
     author = "Tristan Simpson",
     packages = [
         "{multirow}",
-        "{cancel}",
-        Packages.changepage,
+        "{cancel}", # custom packages or
+        Packages.changepage, # use the ones provided
     ]
 )
 
@@ -42,10 +42,10 @@ r.add_table(columns = 3, headers = ["Mass ($kg$)", "Height ($m$)", "Force (N)"],
 # // Procedure
 r.add_header("Procedure", enumerate = False)
 r.add_list(type = "enumerate", items = [
-    Text(r"The string was attached to the table."),
-    Text(r"The mass was attached to the opposite end of the string."),
-    r.raw_text(r"The mass was dropped and the bounceback height was measured."),
-    r.raw_text(r"The net force was calculated.")
+    r.text(r"The string was attached to the table."),
+    r.text(r"The mass was attached to the opposite end of the string."),
+    r.text(r"The mass was dropped and the bounceback height was measured."),
+    r.text(r"The net force was calculated.")
 ])
 
 # // Finalize the build

@@ -52,9 +52,86 @@ class Build:
                 f"pdflatex -aux-directory={self.__file__}/build/ -output-directory={self.__file__}/build/ {self.__file__}/build/{self.file_name}"
             )
     
+    # // Returns a raw image string
+    def image(
+        self, path: str, scale: int
+    ) -> str:
+        if len(path) < 1:
+            return Errors.warning("No image path was provided.")
+
+        if not os.path.exists(f"{self.__file__}/{path}"):
+            return Errors.critical("Image path does not exist!")
+        return f"\includegraphics[scale={scale}]{{{self.__file__}/{path}}}"
+    
     # // Update the data string
     def add(self, data: str):
         self.data += str(data)
+        
+    # // Create a new table element in the pdf
+    def table(
+        self, columns: int, headers: list[str], data: list[any]
+    ) -> str:
+        return str(Table(columns=columns, headers=headers, data=data))
+    
+    # // Create a new text element in the pdf
+    def text(
+        self, content: str, b: bool = False, it: bool = False
+    ) -> str:
+        return str(Text(content=content, b=b, it=it))
+    
+    # // Create a new adjust (adjustwidth) element in the pdf
+    def adjust(
+        self, width: int, items: list[any]
+    ) -> str:
+        return str(Adjust(width=width, items=items))
+    
+    # // Create a new header (/section) element in the pdf
+    def header(
+        self, content: str, enumerate: bool = False
+    ) -> str:
+        return str(Header(content=content, enumerate=enumerate))
+    
+    # // Create a new list element
+    def list(
+        self, type: str = "itemize", items: list[any] = []
+    ) -> str:
+        return str(List(type=type, items=items))
+    
+    # // Line list. List created by newlines in a string.
+    def linelist(
+        self, type: str = "itemize", content: str = ""
+    ) -> str:
+        return str(LineList(type=type, content=content))
+    
+    # // Create a new flex element
+    def flex(
+        self, width: int = 0.33, items = []
+    ) -> str:
+        return str(Flex(width=width, items=items))
+    
+    # // Create a new vertical space element
+    def vspace(
+        self, size: int = 1
+    ) -> str:
+        return str(Space(type="v", size=size))
+        
+    # // Create a new horizontal space element
+    def hspace(
+        self, size: int = 1
+    ) -> str:
+        return str(Space(type="h", size=size))
+    
+    # // Add a new line
+    def newline(
+        self, amount: int = 1
+    ) -> str:
+        return "".join("\\newline" for _ in range(amount))
+    
+    # // Add a new equation
+    def eq(
+        self, content: str, enumerate: bool = False
+    ) -> str:
+        return str(Equation(content=content, enumerate=enumerate))
         
     # // Create a new table element in the pdf
     def add_table(
@@ -133,81 +210,4 @@ class Build:
         if not os.path.exists(f"{self.__file__}/{path}"):
             return Errors.critical("Image path does not exist!")
         self.add(f"\includegraphics[scale={scale}]{{{self.__file__}/{path}}}")
-
-    # // Returns a raw image string
-    def raw_image(
-        self, path: str, scale: int
-    ) -> str:
-        if len(path) < 1:
-            return Errors.warning("No image path was provided.")
-
-        if not os.path.exists(f"{self.__file__}/{path}"):
-            return Errors.critical("Image path does not exist!")
-        return f"\includegraphics[scale={scale}]{{{self.__file__}/{path}}}"
-    
-    # // Create a new table element in the pdf
-    def raw_table(
-        self, columns: int, headers: list[str], data: list[any]
-    ) -> str:
-        return str(Table(columns=columns, headers=headers, data=data))
-    
-    # // Create a new text element in the pdf
-    def raw_text(
-        self, content: str, b: bool = False, it: bool = False
-    ) -> str:
-        return str(Text(content=content, b=b, it=it))
-    
-    # // Create a new adjust (adjustwidth) element in the pdf
-    def raw_adjust(
-        self, width: int, items: list[any]
-    ) -> str:
-        return str(Adjust(width=width, items=items))
-    
-    # // Create a new header (/section) element in the pdf
-    def raw_header(
-        self, content: str, enumerate: bool = False
-    ) -> str:
-        return str(Header(content=content, enumerate=enumerate))
-    
-    # // Create a new list element
-    def raw_list(
-        self, type: str = "itemize", items: list[any] = []
-    ) -> str:
-        return str(List(type=type, items=items))
-    
-    # // Line list. List created by newlines in a string.
-    def raw_linelist(
-        self, type: str = "itemize", content: str = ""
-    ) -> str:
-        return str(LineList(type=type, content=content))
-    
-    # // Create a new flex element
-    def raw_flex(
-        self, width: int = 0.33, items = []
-    ) -> str:
-        return str(Flex(width=width, items=items))
-    
-    # // Create a new vertical space element
-    def raw_vspace(
-        self, size: int = 1
-    ) -> str:
-        return str(Space(type="v", size=size))
-        
-    # // Create a new horizontal space element
-    def raw_hspace(
-        self, size: int = 1
-    ) -> str:
-        return str(Space(type="h", size=size))
-    
-    # // Add a new line
-    def raw_newline(
-        self, amount: int = 1
-    ) -> str:
-        return "".join("\\newline" for _ in range(amount))
-    
-    # // Add a new equation
-    def raw_eq(
-        self, content: str, enumerate: bool = False
-    ) -> str:
-        return str(Equation(content=content, enumerate=enumerate))
 
