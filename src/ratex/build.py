@@ -135,7 +135,7 @@ class Build:
         
     # // Create a new table element in the pdf
     def add_table(
-        self, columns: int, headers: list[str], data: list[any]
+        self, columns: int, headers, data
     ) -> None:
         self.add(Table(columns=columns, headers=headers, data=data))
     
@@ -147,7 +147,7 @@ class Build:
     
     # // Create a new adjust (adjustwidth) element in the pdf
     def add_adjust(
-        self, width: int, items: list[any]
+        self, width: int, items
     ) -> None:
         self.add(Adjust(width=width, items=items))
     
@@ -159,7 +159,7 @@ class Build:
     
     # // Create a new list element
     def add_list(
-        self, type: str = "itemize", items: list[any] = []
+        self, type: str = "itemize", items = []
     ) -> None:
         self.add(List(type=type, items=items))
     
