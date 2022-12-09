@@ -19,11 +19,11 @@ class Text(object):
         self.italic = it
     
     def __str__(self) -> str:
-        if self.bold:
+        if self.italic and self.bold:
+            return f"\\textbf{{\\textit{{{self.content}}}}}"
+        elif self.bold:
             return f"\\textbf{{{self.content}}}"
         elif self.italic:
             return f"\\textit{{{self.content}}}"
-        elif self.italic and self.bold:
-            return f"\\textbf{{\\textit{{{self.content}}}}}"
         return f"{{{self.content}}}"
     
