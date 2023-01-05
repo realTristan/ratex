@@ -9,6 +9,7 @@ pip install ratex
 
 # Math Snippets
 If using vscode, create a folder named .vscode in your project directory then copy the **math.code-snippets** file into it.
+
 Math snippets by https://github.com/thomanq/math-snippets
 
 
