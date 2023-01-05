@@ -7,9 +7,13 @@ If you don't have LaTeX installed, go to https://www.overleaf.com/ and copy + pa
 pip install ratex
 ```
 
-# Preview
+# Math Snippets
+If using vscode, create a folder named .vscode in your project directory then copy the **math.code-snippets** file into it.
+Math snippets by https://github.com/thomanq/math-snippets
 
-<h3>Code</h3>
+
+# Preview
+### Code
 
 ```py
 from ratex import Build, Text, Packages
@@ -52,12 +56,9 @@ r.add_list(type = "enumerate", items = [
 r.done()
 ```
 
-<h3>Output</h3>
+### Output
 
 ![ratex2](https://user-images.githubusercontent.com/75189508/205525983-dcfbc5a0-1aa8-4180-8706-cdb778c22e63.png)
-
-# Math Snippets
-Math snippets by https://github.com/thomanq/math-snippets
 
 # License
 MIT License
