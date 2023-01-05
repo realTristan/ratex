@@ -56,6 +56,9 @@ r.done()
 
 ![ratex2](https://user-images.githubusercontent.com/75189508/205525983-dcfbc5a0-1aa8-4180-8706-cdb778c22e63.png)
 
+# Math Snippets
+Math snippets from https://github.com/thomanq/math-snippets
+
 # License
 MIT License
 
